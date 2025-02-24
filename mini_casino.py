@@ -42,7 +42,7 @@ def roulette_game():
     bet_type = input("Choose your bet type (1 or 2): ").strip()
 
     if bet_type == "1":
-        # Bet on a specific number
+        #bet on a number
         try:
             user_number = int(input("Enter the number you want to bet on (0-36): ").strip())
             if user_number < 0 or user_number > 36:
@@ -52,7 +52,7 @@ def roulette_game():
             print("Invalid input. Please enter an integer between 0 and 36.")
             return
     elif bet_type == "2":
-        # Bet on a color
+        #bet on a color
         user_color = input("Enter the color you want to bet on (red or black): ").strip().lower()
         if user_color not in {"red", "black"}:
             print("Invalid color. Please choose either 'red' or 'black'.")
