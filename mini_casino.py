@@ -142,7 +142,7 @@ def roulette_game(balance):
     # results
     if bet_type == "1":  # if he chooses to bet in a number
         if result_number == user_number:
-            print(f"Congratulations! Your number hit. You won {bet_amount * 35}!")
+            print(f"Congratulations! Your number hit. You won {winnings}!")
             return balance + bet_amount * 35
         else:
             print(f"Sorry, your number did not hit. Better luck next time! You lost {bet_amount}")
@@ -150,7 +150,7 @@ def roulette_game(balance):
     else:  # if he chooses to bet in a color
         if result_color == user_color:
             print(f"Congratulations! The color matches. You won {bet_amount * 2}!")
-            return balance + bet_amount * 2
+            return balance + bet_amount
         else:
             print(f"Sorry, the color doesn't match. You lost {bet_amount}.")
             return balance - bet_amount
@@ -231,7 +231,7 @@ def blackjack_game(balance):
 
     if calculate_hand_value(dealer_hand) > 21:  # if the dealer has more than 21 he busts
         print(f"Dealer busts! You won {bet_amount * 2}!")
-        return balance + bet_amount * 2
+        return balance + bet_amount
 
     # determining the winner
     player_total = calculate_hand_value(player_hand)
@@ -242,7 +242,7 @@ def blackjack_game(balance):
 
     if player_total > dealer_total:
         print(f"You won {bet_amount * 2}!")
-        return balance + bet_amount * 2
+        return balance + bet_amount
     elif player_total < dealer_total:
         print(f"Dealer wins. You lost {bet_amount}!")
         return balance - bet_amount
