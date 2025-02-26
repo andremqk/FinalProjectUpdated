@@ -142,7 +142,7 @@ def roulette_game(balance):
     # results
     if bet_type == "1":  # if he chooses to bet in a number
         if result_number == user_number:
-            print(f"Congratulations! Your number hit. You won {winnings}!")
+            print(f"Congratulations! Your number hit. You won {bet_amount * 35}!")
             return balance + bet_amount * 35
         else:
             print(f"Sorry, your number did not hit. Better luck next time! You lost {bet_amount}")
